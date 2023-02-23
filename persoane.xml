@@ -4,5 +4,12 @@
         <nume>Ioja</nume>
         <prenume>Andrei-Iosif</prenume>
         <varsta>20</varsta>
+        <adresa>
+            <strada>Tudor Vladimirescu</strada>
+            <numar>1</numar>
+            <localitate>Moinesti</localitate>
+            <judet>Bacau</judet>
+            <tara>Romania</tara>
+        </adresa>
     </persoana>
 </persoane>
