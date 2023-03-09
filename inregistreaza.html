@@ -14,7 +14,51 @@
             <a href="video.html">Video</a> |
             <a href="despre.html">Despre</a>
         </nav>
+        <hr>
         <!-- Continutul fisierului curent -->
+        <form>
+            <fieldset>
+                <legend>Informații generale</legend>
+                <label for="username">Nume utilizator:</label>
+                <input type="text" id="username" name="username"><br>
+                
+                <label for="password">Parola:</label>
+                <input type="password" id="password" name="password"><br>
+
+                <label for="name">Nume:</label>
+                <input type="text" id="name" name="name"><br>
+
+                <label for="firstname">Prenume:</label>
+                <input type="text" id="firstname" name="firstname"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" name="phone"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Informații personale</legend>
+                <label for="gender">Sex:</label>
+                <select id="gender">
+                    <option value="m">Masculin</option>
+                    <option value="f">Feminin</option>
+                </select><br>
+                
+                <label for="food">Mâncare preferată:</label>
+                <select id="food">
+                </select><br>
+
+                <label for="color">Culoarea preferată:</label>
+                <select id="color">
+                    <option value="red">Roșu</option>
+                    <option value="green">Verde</option>
+                    <option value="blue">Albastru</option>
+                </select>
+            </fieldset>
+
+            <button type="submit">Înregistrează</button>
+        </form>
         <hr>
         <footer>&#169; 2023. Programarea funcțională</footer>
     </body>
