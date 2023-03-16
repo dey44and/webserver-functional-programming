@@ -44,17 +44,24 @@
                     <option value="m">Masculin</option>
                     <option value="f">Feminin</option>
                 </select><br>
-                
-                <label for="food">Mâncare preferată:</label>
-                <select id="food">
+
+                <label for="programming">Limbajul de programare preferat:</label>
+                <select id="programming">
+                    <option value="1">C</option>
+                    <option value="2">C++</option>
+                    <option value="3">Java</option>
+                    <option value="4">Python</option>
+                    <option value="5">Kotlin</option>
+                    <option value="6">Scala</option>
                 </select><br>
 
-                <label for="color">Culoarea preferată:</label>
-                <select id="color">
-                    <option value="red">Roșu</option>
-                    <option value="green">Verde</option>
-                    <option value="blue">Albastru</option>
-                </select>
+                <label for="date">Data nașterii:</label>
+                <input type="date" id="start" name="date" value="2023-03-16" min="1900-01-01" max="2013-01-01">
+                <br>
+
+                <label for="url">Adresă site web personal:</label>
+                <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30">
+                <br>
             </fieldset>
 
             <button type="submit">Înregistrează</button>
