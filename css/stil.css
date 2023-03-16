@@ -1,0 +1,32 @@
+body {
+    background-image: linear-gradient(to bottom, #121026, #1c1a31);
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, legend, label {
+    color: #ffffff;
+    font-family:'Open Sans Bold';
+}
+
+nav a {
+    text-decoration: none;
+    color: #d1d1d1;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family:'Open Sans Bold';
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+h2, p, footer {
+    color: #ffffff;
+    font-family:'Open Sans Bold';
+}
+
+table, thead, tbody {
+    color: #ffffff;
+}
