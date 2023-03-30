@@ -1,0 +1,71 @@
+body {
+    background-color: #121026;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, legend, label {
+    color: #ffffff;
+    font-family:'Open Sans Bold';
+}
+
+nav a {
+    text-decoration: none;
+    color: #d1d1d1;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family:'Open Sans Bold';
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+h2, p, footer {
+    color: #ffffff;
+    font-family:'Open Sans Bold';
+}
+
+table, thead, tbody {
+    color: #ffffff;
+}
+
+/* Index center zone */
+.main-div-image {
+    width: 60%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+    background: radial-gradient(closest-side at 50% 50%, #ffffff, #121026);
+}
+
+.main-div-image img {
+    margin: auto;
+    display: block;
+}
+
+/* Inregistreaza */
+
+label, input, select {
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 10px 10px 10px 10px;
+    border: none;
+    color: #121026;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: 1s ease-in;
+}
+
+button:hover {
+    color: white;
+    background-color: #121026;
+}

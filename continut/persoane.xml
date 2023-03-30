@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persoane SYSTEM "validate.dtd">
+<persoane>
+    <persoana id="1">
+        <nume>Ioja</nume>
+        <prenume>Andrei-Iosif</prenume>
+        <varsta>20</varsta>
+        <adresa>
+            <strada>Tudor Vladimirescu</strada>
+            <numar>1</numar>
+            <localitate>Moinesti</localitate>
+            <judet>Bacau</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <studii>
+            <liceal>
+                <denumire>Liceul Teoretic "Spiru Haret"</denumire>
+                <adresa>
+                    <strada>Zorilor</strada>
+                    <numar>17</numar>
+                    <localitate>Moinesti</localitate>
+                    <judet>Bacau</judet>
+                    <tara>Romania</tara>
+                </adresa>
+            </liceal>
+            <universitar>
+                <denumire>Facultatea de Automatică și Calculatoare</denumire>
+                <adresa>
+                    <strada>Bulevardul Profesor Dr. doc. Dimitrie Mangeron</strada>
+                    <numar>27</numar>
+                    <localitate>Iasi</localitate>
+                    <judet>Iasi</judet>
+                    <tara>Romania</tara>
+                </adresa>
+            </universitar>
+        </studii>
+    </persoana>
+    <persoana id="2">
+        <nume>Dospinescu</nume>
+        <prenume>Razvan-Marian</prenume>
+        <varsta>22</varsta>
+        <adresa>
+            <strada>Capitan Zaganescu</strada>
+            <numar>10</numar>
+            <localitate>Moinesti</localitate>
+            <judet>Bacau</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <studii>
+            <liceal>
+                <denumire>Liceul Teoretic "Spiru Haret"</denumire>
+                <adresa>
+                    <strada>Zorilor</strada>
+                    <numar>17</numar>
+                    <localitate>Moinesti</localitate>
+                    <judet>Bacau</judet>
+                    <tara>Romania</tara>
+                </adresa>
+            </liceal>
+            <universitar>
+                <denumire>Facultatea de Mecanică</denumire>
+                <adresa>
+                    <strada>Bulevardul Muncii</strada>
+                    <numar>103</numar>
+                    <localitate>Cluj-Napoca</localitate>
+                    <judet>Cluj</judet>
+                    <tara>Romania</tara>
+                </adresa>
+            </universitar>
+        </studii>
+    </persoana>
+    <persoana id="3">
+        <nume>Taban</nume>
+        <prenume>Jasmine-Elena</prenume>
+        <varsta>21</varsta>
+        <adresa>
+            <strada>Strada principala</strada>
+            <numar>4</numar>
+            <localitate>Biliesti</localitate>
+            <judet>Vrancea</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <studii>
+            <liceal>
+                <denumire>Liceul de Arta "Gh. Tattarescu"</denumire>
+                <adresa>
+                    <strada>Dornei</strada>
+                    <numar>5</numar>
+                    <localitate>Focșani</localitate>
+                    <judet>Vrancea</judet>
+                    <tara>Romania</tara>
+                </adresa>
+            </liceal>
+            <universitar>
+                <denumire>Facultatea de Limbi și Literaturi Străine</denumire>
+                <adresa>
+                    <strada>Pitar Moș</strada>
+                    <numar>-</numar>
+                    <localitate>București</localitate>
+                    <judet>București</judet>
+                    <tara>Romania</tara>
+                </adresa>
+            </universitar>
+        </studii>
+    </persoana>
+    <persoana id="4">
+        <nume>Todeancă</nume>
+        <prenume>Maria-Claudia</prenume>
+        <varsta>21</varsta>
+        <adresa>
+            <strada>Mihai Eminescu</strada>
+            <numar>13</numar>
+            <localitate>Moinești</localitate>
+            <judet>Bacău</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <studii>
+            <liceal>
+                <denumire>Colegiul Național "Gheorghe Vrânceanu"</denumire>
+                <adresa>
+                    <strada>Lucrețiu Pătrășcanu</strada>
+                    <numar>30</numar>
+                    <localitate>Bacău</localitate>
+                    <judet>Bacău</judet>
+                    <tara>Romania</tara>
+                </adresa>
+            </liceal>
+            <universitar>
+                <denumire>Universitatea de Medicină și Farmacie „Grigore T. Popa”</denumire>
+                <adresa>
+                    <strada>Universității</strada>
+                    <numar>16</numar>
+                    <localitate>Iași</localitate>
+                    <judet>Iași</judet>
+                    <tara>Romania</tara>
+                </adresa>
+            </universitar>
+        </studii>
+    </persoana>
+</persoane>
