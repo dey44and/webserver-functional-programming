@@ -69,3 +69,7 @@ button:hover {
     color: white;
     background-color: #121026;
 }
+
+img {
+    border-radius: 10%;
+}
