@@ -22,5 +22,27 @@
         </header>
         <hr>
         <!-- Continutul fisierului curent -->
+        <div id ="main-image">
+            <svg id="main-image-svg">
+                <text x="15" y="25" fill="black">Obiect 1</text>
+                <circle cx="50" cy="80" r="40" stroke="green" stroke-width="4" fill="yellow"/>
+                
+                <text x="155" y="25" fill="black">Obiect 2</text>
+                <rect x="150" y="40" width="80" height="80" style="fill:rgb(0,0,255);stroke-width:4;stroke:rgb(0,0,0)" />
+
+                <text x="295" y="25" fill="black">Obiect 3</text>
+                <rect class="rotate-rect" x="295" y="45" width="60" height="60" style="fill:rgb(67, 133, 57);stroke-width:4;stroke:rgb(0,0,0)" />
+
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" />
+                    </marker>
+                </defs>
+                <line x1="450" y1="76" x2="600" y2="76" stroke="#000" stroke-width="8" marker-end="url(#arrowhead)" />
+            </svg>
+        </div>
+
+        <hr>
+        <footer>&#169; 2023. Programarea funcțională</footer>
     </body>
 </html>
