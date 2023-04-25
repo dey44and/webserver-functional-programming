@@ -2,8 +2,8 @@ package org.example
 
 import org.example.controllers.ServerWeb
 
-fun main() {
-    val serverWeb = ServerWeb()
+suspend fun main() {
     // Start server
+    val serverWeb = ServerWeb()
     serverWeb.run()
 }
