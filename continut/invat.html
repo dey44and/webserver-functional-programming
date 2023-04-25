@@ -26,7 +26,31 @@
         <section id="sel-1">
             <p id="origin"></p>
             <p id="info"></p>
+            <p id="location"></p>
             <p id="current-time"></p>
+        </section>
+        <section id="sel-2">
+            <canvas id="canvas" width="800" height="400" style="border: 1px solid black; background-color: white;"></canvas>
+            <div>
+                <label for="border-color-picker">Border Color:</label>
+                <input type="color" id="border-color-picker" value="#000000">
+            </div>
+            <div>
+                <label for="fill-color-picker">Fill Color:</label>
+                <input type="color" id="fill-color-picker" value="#ffffff">
+            </div>
+        </section>
+        <section id="sel-3">
+            <input type="text" id="position">
+            <button onclick="insertRow()">Insereaza linie</button>
+            <button onclick="insertColumn()">Insereaza coloana</button>
+            <div>
+                <label for="color-picker">Color:</label>
+                <input type="color" id="color-picker" value="#000000">
+            </div>
+            <table id="table">
+
+            </table>
         </section>
         <footer>&#169; 2023. Programarea funcțională</footer>
     </body>

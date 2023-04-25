@@ -1,12 +1,127 @@
+var canvas, ctx, borderColorPicker, fillColorPicker;
+
+/* Browser informations - Section 1 */
+
 function loadInfo() {
-    setInterval(getTime, 1000)
-    let elementOrigin = document.getElementById("origin")
-    let elementInfo = document.getElementById("info")
-    elementOrigin.innerHTML = "Origin: " + location.href
-    elementInfo.innerHTML = "Browser name: " + navigator.appName + "</br>Browser version: " + navigator.appVersion
+    getTime();
+    // Timer for time
+    setInterval(getTime, 1000);
+
+    // Browser info
+    let elementOrigin = document.getElementById("origin");
+    let elementInfo = document.getElementById("info");
+    elementOrigin.innerHTML = "Origin: " + location.href;
+    elementInfo.innerHTML = "Browser name: " + navigator.appCodeName + " " + navigator.appName + "</br>Browser version: " + 
+                            navigator.appVersion + "</br>Operating system: " + navigator.oscpu;
+
+    let elementLocation = document.getElementById("location");
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            elementLocation.innerHTML = "Location: (Latitude: " + latitude + ", Longitude: " + longitude + ")";
+        });
+    } else {
+        elementLocation.innerHTML = "Geolocation is not supported by this browser.";
+    }
 }
 
 function getTime() {
-    let element = document.getElementById("current-time")
-    element.innerHTML = "Ora exacta: " + (new Date())
+    let element = document.getElementById("current-time");
+    element.innerHTML = "Ora exacta: " + (new Date());
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+    canvas = document.getElementById("canvas");
+    ctx = canvas.getContext("2d");
+  });
+
+/* Get mouse coordinates and save - Section 2*/
+function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect(),
+      scaleX = canvas.width / rect.width,
+      scaleY = canvas.height / rect.height;
+  
+    return {
+      x: (evt.clientX - rect.left) * scaleX,
+      y: (evt.clientY - rect.top) * scaleY
+    }
+}
+
+let start = {};
+function startRect(e) {
+    start = getMousePos(canvas, e);
+}
+window.addEventListener("mousedown", startRect);
+
+let stop = {};
+function stopRect(e) {
+    stop = getMousePos(canvas, e);
+
+    borderColorPicker = document.getElementById("border-color-picker");
+    fillColorPicker = document.getElementById("fill-color-picker");
+
+    ctx.beginPath();
+    ctx.rect(start.x, start.y, stop.x - start.x, stop.y - start.y);
+    ctx.strokeStyle = borderColorPicker.value;
+    ctx.fillStyle = fillColorPicker.value;
+    ctx.fill();
+    ctx.stroke();
+}
+window.addEventListener("mouseup", stopRect);
+
+/* Edit table - Section 3 */
+
+function insertRow() {
+    //Obținem poziția introdusă de utilizator
+    var pos = document.getElementById("position").value;
+    
+    //Obținem referința la tabel
+    var table = document.getElementById("table");
+    
+    //Creăm un nou rând
+    var newRow = table.insertRow(pos);
+    
+    //Adăugăm celule noi în rândul nou creat
+    for (var i = 0; i < table.rows[0].cells.length; i++) {
+      var newCell = newRow.insertCell(i);
+      newCell.innerHTML = "New Cell";
+    }
+    
+    //Obținem valoarea color picker-ului
+    var color = document.getElementById("color-picker").value;
+    
+    //Setăm culoarea de fundal a celulelor din rândul nou creat
+    for (var i = 0; i < newRow.cells.length; i++) {
+      newRow.cells[i].style.backgroundColor = color;
+    }
+}
+
+function insertColumn() {
+    //Obținem poziția introdusă de utilizator
+    var pos = document.getElementById("position").value;
+    
+    //Obținem referința la tabel
+    var table = document.getElementById("table");
+    
+    //Adăugăm celule noi în fiecare rând
+    for (var i = 0; i < table.rows.length; i++) {
+      var newCell = table.rows[i].insertCell(pos);
+      newCell.innerHTML = "New Cell";
+    }
+    
+    //Obținem valoarea color picker-ului
+    var color = document.getElementById("color-picker").value;
+    
+    //Setăm culoarea de fundal a celulelor din coloana nou creată
+    for (var i = 0; i < table.rows.length; i++) {
+      table.rows[i].cells[pos].style.backgroundColor = color;
+    }
+}
+  
+
+
+
+
+
+
