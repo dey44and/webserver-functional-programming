@@ -16,6 +16,7 @@ nav a {
     padding-right: 10px;
     font-family:'Open Sans Bold';
     transition: 0.5s;
+    cursor: pointer;
 }
 
 nav a:hover {

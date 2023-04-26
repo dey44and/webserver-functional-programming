@@ -27,7 +27,7 @@ class ResponseService(private val clientSocket: Socket, private val resource: St
 
                 // Start writing data
                 val content = FileInputStream(file)
-                
+
                 // Global data to store all
                 var globalBuffer = ByteArray(0)
                 var globalLength = 0
@@ -58,7 +58,6 @@ class ResponseService(private val clientSocket: Socket, private val resource: St
                 socketWriter.flush()
 
                 // Flush and close file
-                //clientSocket.getOutputStream().write(compressedBuffer, 0, compressedBuffer.size)
                 clientSocket.getOutputStream().write(compressedBuffer, 0, compressedBuffer.size)
                 clientSocket.getOutputStream().flush()
                 content.close()
