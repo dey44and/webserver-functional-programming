@@ -27,6 +27,7 @@ class ResponseService(private val clientSocket: Socket, private val resource: St
 
                 // Start writing data
                 val content = FileInputStream(file)
+                
                 // Global data to store all
                 var globalBuffer = ByteArray(0)
                 var globalLength = 0
@@ -34,7 +35,6 @@ class ResponseService(private val clientSocket: Socket, private val resource: St
                 // Read data
                 val buffer = ByteArray(1024)
                 var length = content.read(buffer)
-
                 while (length != -1) {
                     // Update global
                     globalLength += length
@@ -44,8 +44,9 @@ class ResponseService(private val clientSocket: Socket, private val resource: St
                 }
 
                 // Convert data to gzip
+                val realBuffer = globalBuffer.copyOfRange(0, globalLength)
                 val gzipConverter: IGzipConverter = GzipConverterService()
-                val compressedBuffer = gzipConverter.encode(globalBuffer)
+                val compressedBuffer = gzipConverter.encode(realBuffer)
 
                 // Start writing metadata
                 socketWriter.print("HTTP/1.1 200 OK\r\n")
@@ -57,6 +58,7 @@ class ResponseService(private val clientSocket: Socket, private val resource: St
                 socketWriter.flush()
 
                 // Flush and close file
+                //clientSocket.getOutputStream().write(compressedBuffer, 0, compressedBuffer.size)
                 clientSocket.getOutputStream().write(compressedBuffer, 0, compressedBuffer.size)
                 clientSocket.getOutputStream().flush()
                 content.close()

@@ -1,94 +1,67 @@
-<!DOCTYPE html>
-<html lang="RO-ro">
-    <head>
-        <title>Programarea funcțională</title>
-        <meta charset="utf-8">
-        <link rel="icon" type="image/x-icon" href="imagini/favicon-32x32.png">
-        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-        <link rel="stylesheet" href="css/stil.css">
-    </head>
-    <body>
-        <!-- Bara de navigare -->
-        <header>
-            <h1>Programare funcțională</h1>
-            <nav>
-                <a href="index.html">Acasă</a> |
-                <a href="inregistreaza.html">Înregistrează</a> |
-                <a href="video.html">Video</a> |
-                <a href="despre.html">Despre</a> |
-                <a href="invat.html">Invăț</a> |  
-                <a href="desen.html">Desen</a>
-            </nav>
-        </header>
-        <!-- Continutul fisierului curent -->
-        <h2>Ce este programarea funcțională?</h2>
-        <hr>
+<!-- Continutul fisierului curent -->
+<h2>Ce este programarea funcțională?</h2>
+<hr>
 
-        <p>
-            Cei mai mulți programatori și-au început activitatea folosind un stil <strong>imperativ</strong> de a scrie cod.
-            Acest stil presupune scrierea unui set de instrucțiuni pe care calculatorul trebuie să le execute secvențial.
-            Suntem înclinați în mod natural să adoptăm o astfel de paradigmă datorită simplicității acesteia.
-        </p>    
-        <p>
-            <strong>Programarea funcțională</strong> este <em>alternativa</em> stilului de <strong>programare imperativă</strong>.
-        </p>
-        <p>
-            O introducere în ce privește scrierea de cod folosind această paradigmă se găsește <a href="https://www.tutorialspoint.com/functional_programming/functional_programming_quick_guide.htm#">aici</a>.
-        </p>
-        <h4>O imagine sugestivă se poate observa mai jos:</h4>
-        <img height=300 width=500 src="https://files.realpython.com/media/TUT19---Functional-Programming_Watermarked.7c5a8382c298.jpg" alt="Imaginea conține animația a trei operații din programarea funcțională">
+<p>
+    Cei mai mulți programatori și-au început activitatea folosind un stil <strong>imperativ</strong> de a scrie cod.
+    Acest stil presupune scrierea unui set de instrucțiuni pe care calculatorul trebuie să le execute secvențial.
+    Suntem înclinați în mod natural să adoptăm o astfel de paradigmă datorită simplicității acesteia.
+</p>    
+<p>
+    <strong>Programarea funcțională</strong> este <em>alternativa</em> stilului de <strong>programare imperativă</strong>.
+</p>
+<p>
+    O introducere în ce privește scrierea de cod folosind această paradigmă se găsește <a href="https://www.tutorialspoint.com/functional_programming/functional_programming_quick_guide.htm#">aici</a>.
+</p>
+<h4>O imagine sugestivă se poate observa mai jos:</h4>
+<img height=300 width=500 src="https://files.realpython.com/media/TUT19---Functional-Programming_Watermarked.7c5a8382c298.jpg" alt="Imaginea conține animația a trei operații din programarea funcțională">
 
-        <hr>
-        <h4>Exemple de funcții și semnificația acestora</h4>
-        <table border="1">
-            <tr>
-                <th>Funcție</th>
-                <th>Operație realizată</th>
-            </tr>
-            <tr>
-                <td>Filter</td>
-                <td>Returnează un șir nou de elemente care satisfac o condiție impusă</td>
-            </tr>
-            <tr>
-                <td>Find</td>
-                <td>Determină prima valoare dintr-un șir care satisface condiția impusă</td>
-            </tr>
-            <tr>
-                <td>Reduce</td>
-                <td>Calculează suma elementelor dintr-un șir</td>
-            </tr>
-        </table>
-        <p><strong>Observație:</strong> Tabelul de mai sus conține doar câteva funcții ce pot fi utilizate. De asemenea, programatorul poate defini <em>propriile funcționalități</em>.</p>
+<hr>
+<h4>Exemple de funcții și semnificația acestora</h4>
+<table border="1">
+    <tr>
+        <th>Funcție</th>
+        <th>Operație realizată</th>
+    </tr>
+    <tr>
+        <td>Filter</td>
+        <td>Returnează un șir nou de elemente care satisfac o condiție impusă</td>
+    </tr>
+    <tr>
+        <td>Find</td>
+        <td>Determină prima valoare dintr-un șir care satisface condiția impusă</td>
+    </tr>
+    <tr>
+        <td>Reduce</td>
+        <td>Calculează suma elementelor dintr-un șir</td>
+    </tr>
+</table>
+<p><strong>Observație:</strong> Tabelul de mai sus conține doar câteva funcții ce pot fi utilizate. De asemenea, programatorul poate defini <em>propriile funcționalități</em>.</p>
 
-        <hr>
-        <form>
-            <h3>Formular de contact</h3>
-            <label for="nume">Nume:</label><br>
-            <input type="text" id="nume" name="nume"><br>
-            <label for="prenume">Prenume:</label><br>
-            <input type="text" id="prenume" name="prenume"><br>
-            <label for="descriere">Descriere:</label><br>
-            <textarea id="descriere"></textarea><br>
-            <label for="test">1+1=</label>
-            <input type="number" id="test" name="test"><br>
-            <input type="checkbox" id="check" name="check" value="Termeni și condiții"><br>
-            <button type="submit">Trimite</button>
-        </form>
+<hr>
+<form>
+    <h3>Formular de contact</h3>
+    <label for="nume">Nume:</label><br>
+    <input type="text" id="nume" name="nume"><br>
+    <label for="prenume">Prenume:</label><br>
+    <input type="text" id="prenume" name="prenume"><br>
+    <label for="descriere">Descriere:</label><br>
+    <textarea id="descriere"></textarea><br>
+    <label for="test">1+1=</label>
+    <input type="number" id="test" name="test"><br>
+    <input type="checkbox" id="check" name="check" value="Termeni și condiții"><br>
+    <button type="submit">Trimite</button>
+</form>
 
-        <hr>
-        <h3>Acest site acoperă următoarele aspecte</h3>
-        <ul>
-            <li>Înțelegerea efectelor laterale și problemele care pot să apară</li>
-            <li>Obținerea unei soluții funcționale prin eliminarea efectelor laterale</li>
-            <li>Înțelegerea conceptului de funcție pură</li>
-            <li>Folosirea modelului substituit pentru demonstrarea conceptului de funcție pură</li>
-        </ul>
+<hr>
+<h3>Acest site acoperă următoarele aspecte</h3>
+<ul>
+    <li>Înțelegerea efectelor laterale și problemele care pot să apară</li>
+    <li>Obținerea unei soluții funcționale prin eliminarea efectelor laterale</li>
+    <li>Înțelegerea conceptului de funcție pură</li>
+    <li>Folosirea modelului substituit pentru demonstrarea conceptului de funcție pură</li>
+</ul>
 
-        <p>O introducere în bazele programării funcționale se află mai jos:</p>
-        <iframe src="http://scheme2006.cs.uchicago.edu/" height="400" width="800">
-        </iframe>
-        
-        <hr>
-        <footer>&#169; 2023. Programarea funcțională</footer>
-    </body>
-</html>
+<p>O introducere în bazele programării funcționale se află mai jos:</p>
+<iframe src="http://scheme2006.cs.uchicago.edu/" height="400" width="800">
+</iframe>
