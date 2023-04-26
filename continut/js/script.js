@@ -138,16 +138,35 @@ function schimbaContinut(resource, fun1, fun2) {
   } else {
     learnPage = false;
   }
-  console.log("Status: " + learnPage);
+  //console.log("Status: " + learnPage);
 
   xhttp.onreadystatechange = function() { // Se apelează atunci când se schimbă starea cererii
     if (this.readyState == 4 && this.status == 200) { // Dacă cererea este finalizată și răspunsul este OK
       document.getElementById("content").innerHTML = this.responseText; // Pune conținutul în elementul cu id-ul "continut"
-      if(fun1 && learnPage) {
-        window[fun1]();
+      if(resource == "invat") {
+        if(fun1 && learnPage) {
+          window[fun1]();
+        }
+        if(fun2 && learnPage) {
+          window[fun2]();
+        }
       }
-      if(fun2 && learnPage) {
-        window[fun2]();
+      else {
+        if (fun1) {
+          var elementScript = document.createElement('script');
+            elementScript.onload = function () {
+              console.log("hello");
+              if (fun2) {
+                window[fun2]();
+            }
+          };
+          elementScript.src = fun1;
+          document.head.appendChild(elementScript);
+          } else {
+            if (fun2) {
+              window[fun2]();
+            }
+          }
       }
     }
   };
