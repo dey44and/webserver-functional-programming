@@ -51,8 +51,8 @@ class ResponseService(private val clientSocket: Socket, private val resource: St
                 // Start writing metadata
                 socketWriter.print("HTTP/1.1 200 OK\r\n")
                 socketWriter.print("Content-Length: ${compressedBuffer.size}\r\n")
+                socketWriter.print("Content-Type: $fileType\r\n")
                 socketWriter.print("Content-Encoding: gzip\r\n")
-                socketWriter.print("Content-Type: ${fileType?.let { contentType.getContentType(it) }}\r\n")
                 socketWriter.print("Server: My PW Server\r\n")
                 socketWriter.print("\r\n")
                 socketWriter.flush()

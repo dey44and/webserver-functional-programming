@@ -38,6 +38,15 @@ class ServerWeb {
 
                         when(tokens[0]) {
                             "GET" -> {
+                                // Read input from request
+                                //code to read and print headers
+                                var headerLine: String? = null
+                                headerLine = socketReader.readLine()
+                                while(headerLine?.isNotEmpty() == true){
+                                    println(headerLine)
+                                    headerLine = socketReader.readLine()
+                                }
+
                                 val filePath = "/home/andrei-iosif/Desktop/Programare Web/proiect-1-andreiiosif/" +
                                                "continut${tokens[1]}"
                                 // Create response
@@ -52,6 +61,7 @@ class ServerWeb {
                                     var headerLine: String? = null
                                     headerLine = socketReader.readLine()
                                     while(headerLine?.isNotEmpty() == true){
+                                        println(headerLine)
                                         headerLine = socketReader.readLine()
                                     }
 

@@ -65,17 +65,24 @@ function loadCanvas() {
     
       let stop = {};
       function stopRect(e) {
+        try {
           stop = getMousePos(canvas, e);
     
           borderColorPicker = document.getElementById("border-color-picker");
           fillColorPicker = document.getElementById("fill-color-picker");
     
-          ctx.beginPath();
-          ctx.rect(start.x, start.y, stop.x - start.x, stop.y - start.y);
-          ctx.strokeStyle = borderColorPicker.value;
-          ctx.fillStyle = fillColorPicker.value;
-          ctx.fill();
-          ctx.stroke();
+          if(borderColorPicker && fillColorPicker) {
+            ctx.beginPath();
+            ctx.rect(start.x, start.y, stop.x - start.x, stop.y - start.y);
+            ctx.strokeStyle = borderColorPicker.value;
+            ctx.fillStyle = fillColorPicker.value;
+            ctx.fill();
+            ctx.stroke();
+          }
+        }
+        catch(error) {
+          console.log(error);
+        }
       }
       window.addEventListener("mouseup", stopRect);
     }

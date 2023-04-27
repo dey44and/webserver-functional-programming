@@ -292,7 +292,8 @@ const loadListIndexed = () => {
 const listWorker = new Worker("js/worker.js");
 
 const notifyWorker = () => {
-    listWorker.postMessage([localStorage.getItem("maxID") ?? 1])
+    let nextID = localStorage.getItem("maxID");
+    listWorker.postMessage([nextID]);
 }
 
 listWorker.onmessage = () => {
