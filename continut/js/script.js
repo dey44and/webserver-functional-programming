@@ -138,7 +138,7 @@ function schimbaContinut(resource, fun1, fun2) {
   } else {
     learnPage = false;
   }
-  //console.log("Status: " + learnPage);
+  console.log("Status: " + learnPage);
 
   xhttp.onreadystatechange = function() { // Se apelează atunci când se schimbă starea cererii
     if (this.readyState == 4 && this.status == 200) { // Dacă cererea este finalizată și răspunsul este OK
@@ -172,4 +172,30 @@ function schimbaContinut(resource, fun1, fun2) {
   };
   xhttp.open("GET", fileName, true); // Inițializează cererea GET către fișierul cu numele dat
   xhttp.send(); // Trimite cererea
+}
+
+/* Verifica pagina de login */
+
+const verificaJSON = () => {
+  var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            const statusItem = document.getElementById("status")
+            const data = JSON.parse(this.responseText);
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            for (let i = 0; i < data.length; i++) {
+                if (data[i]["utilizator"] === username && data[i]["parola"] === password) {
+                    statusItem.style.color = "green";
+                    statusItem.innerHTML = "logat";
+                    return;
+                }
+            }
+            statusItem.style.color = "red";
+            statusItem.innerHTML = "Utilizatorul nu exista";
+        }
+    };
+    xhttp.open("GET", "resurse/utilizatori.json", true);
+    xhttp.send();
 }
