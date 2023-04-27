@@ -7,9 +7,9 @@ import java.util.zip.GZIPOutputStream
 class GzipConverterService: IGzipConverter {
     override fun encode(uncompressedData: ByteArray): ByteArray {
         // Create output stream
-        val compressedDataStream: ByteArrayOutputStream = ByteArrayOutputStream(uncompressedData.size)
+        val compressedDataStream = ByteArrayOutputStream(uncompressedData.size)
         // Create GZIP converter
-        val gzipOutputStream: GZIPOutputStream = GZIPOutputStream(compressedDataStream)
+        val gzipOutputStream = GZIPOutputStream(compressedDataStream)
         // Write data
         gzipOutputStream.write(uncompressedData)
         gzipOutputStream.close()

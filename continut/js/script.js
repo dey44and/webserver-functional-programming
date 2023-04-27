@@ -186,14 +186,14 @@ const verificaJSON = () => {
             const password = document.getElementById("password").value;
 
             for (let i = 0; i < data.length; i++) {
-                if (data[i]["utilizator"] === username && data[i]["parola"] === password) {
+                if (data[i]["username"] === username && data[i]["password"] === password) {
                     statusItem.style.color = "green";
-                    statusItem.innerHTML = "logat";
+                    statusItem.innerHTML = "Utilizatorul exista!";
                     return;
                 }
             }
             statusItem.style.color = "red";
-            statusItem.innerHTML = "Utilizatorul nu exista";
+            statusItem.innerHTML = "Utilizatorul nu exista!";
         }
     };
     xhttp.open("GET", "resurse/utilizatori.json", true);
