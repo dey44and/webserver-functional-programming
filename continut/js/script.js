@@ -156,6 +156,14 @@ function schimbaContinut(resource, fun1, fun2) {
   xhttp.onreadystatechange = function() { // Se apelează atunci când se schimbă starea cererii
     if (this.readyState == 4 && this.status == 200) { // Dacă cererea este finalizată și răspunsul este OK
       document.getElementById("content").innerHTML = this.responseText; // Pune conținutul în elementul cu id-ul "continut"
+
+      // Scoate meniul
+      var fsNavCloseBtn = document.querySelector(".fsnav_close");
+      var checkbox = document.getElementById("toggle");
+
+      fsNavCloseBtn.parentElement.className = "fsnav";
+      checkbox.checked = "false";
+
       if(resource == "invat") {
         if(fun1 && learnPage) {
           window[fun1]();

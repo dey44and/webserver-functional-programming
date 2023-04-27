@@ -5,24 +5,33 @@
         <meta charset="utf-16">
         <link rel="icon" type="image/x-icon" href="imagini/favicon-32x32.png">
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+        <link href="https://fonts.cdnfonts.com/css/sigmar-one" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/stil.css">
         <script type="text/javascript" src="js/script.js" defer></script>
+        <script type="text/javascript" src="js/fsnav.js" defer></script>
     </head>
     <body>
         <!-- Bara de navigare -->
         <header>
-            <h1>Programare funcțională</h1>
-            <nav>
-                <a onclick="schimbaContinut('acasa')">Acasă</a> |
-                <a onclick="schimbaContinut('inregistreaza')">Înregistrează</a> |
-                <a onclick="schimbaContinut('video')">Video</a> |
-                <a onclick="schimbaContinut('despre')">Despre</a> |
-                <a onclick="schimbaContinut('invat', 'loadInfo', 'loadCanvas')">Invăț</a> |  
-                <a onclick="schimbaContinut('desen')">Desen</a> | 
-                <a onclick="schimbaContinut('persoane', 'js/persoane.js', 'incarcaPersoane')">Persoane</a> |
-                <a onclick="schimbaContinut('verifica')">Verifică</a> |
-                <a onclick="schimbaContinut('cumparaturi', 'js/cumparaturi.js', 'loadListLocal')">Listă</a>
+            <h1 class="nav-title" onclick="schimbaContinut('acasa')">Programare funcțională</h1>
+            <nav class="fsnav">
+                <button type="button" class="fsnav_close">&times;</button>
+                <a onclick="schimbaContinut('acasa')" class="fsnav_link">Acasă</a> 
+                <a onclick="schimbaContinut('inregistreaza')" class="fsnav_link">Înregistrează</a> 
+                <a onclick="schimbaContinut('video')" class="fsnav_link">Video</a> 
+                <a onclick="schimbaContinut('despre')" class="fsnav_link">Despre</a> 
+                <a onclick="schimbaContinut('invat', 'loadInfo', 'loadCanvas')" class="fsnav_link">Invăț</a> 
+                <a onclick="schimbaContinut('desen')" class="fsnav_link">Desen</a> 
+                <a onclick="schimbaContinut('persoane', 'js/persoane.js', 'incarcaPersoane')" class="fsnav_link">Persoane</a>
+                <a onclick="schimbaContinut('verifica')" class="fsnav_link">Verifică</a>
+                <a onclick="schimbaContinut('cumparaturi', 'js/cumparaturi.js', 'loadListLocal')" class="fsnav_link">Listă</a>
             </nav>
+            <label class="navbar-toggler" for="toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <input type="checkbox" id="toggle">
         </header>
         <hr>
         <!-- Continutul fisierului curent -->

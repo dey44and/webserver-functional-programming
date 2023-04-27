@@ -20,7 +20,7 @@ class ResponseService(private val clientSocket: Socket, private val resource: St
                     contentType.getContentType(resource.split(".")[1])
                 } catch(e: Exception) {
                     file = File("/home/andrei-iosif/Desktop/Programare Web/proiect-1-andreiiosif/continut/index.html")
-                    StringBuilder("html").toString()
+                    StringBuilder("text/html").toString()
                 }
                 // Wrapper peste fluxul de iesire
                 val socketWriter = PrintWriter(clientSocket.getOutputStream(), true)

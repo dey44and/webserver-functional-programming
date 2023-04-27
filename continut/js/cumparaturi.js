@@ -207,6 +207,7 @@ const addToListLocal = (nume, cantitate) => {
 
 const addToListIndexed = (nume, cantitate) => {
     const storage = new IndexStorage();
+    storage.setMaxIndex(0);
 
     storage.getMaxIndex().then(id => {
         let produs = new Produs(id, nume, cantitate);
