@@ -42,40 +42,46 @@ function getTime() {
 }
 
 /* Get mouse coordinates and save - Section 2*/
+
 function loadCanvas() {
   if(learnPage) {
-    function getMousePos(canvas, evt) {
-      var rect = canvas.getBoundingClientRect(),
-        scaleX = canvas.width / rect.width,
-        scaleY = canvas.height / rect.height;
-    
-      return {
-        x: (evt.clientX - rect.left) * scaleX,
-        y: (evt.clientY - rect.top) * scaleY
+    try {
+      function getMousePos(canvas, evt) {
+        var rect = canvas.getBoundingClientRect(),
+          scaleX = canvas.width / rect.width,
+          scaleY = canvas.height / rect.height;
+      
+        return {
+          x: (evt.clientX - rect.left) * scaleX,
+          y: (evt.clientY - rect.top) * scaleY
+        }
       }
+    
+      let start = {};
+      function startRect(e) {
+          start = getMousePos(canvas, e);
+      }
+      window.addEventListener("mousedown", startRect);
+    
+      let stop = {};
+      function stopRect(e) {
+          stop = getMousePos(canvas, e);
+    
+          borderColorPicker = document.getElementById("border-color-picker");
+          fillColorPicker = document.getElementById("fill-color-picker");
+    
+          ctx.beginPath();
+          ctx.rect(start.x, start.y, stop.x - start.x, stop.y - start.y);
+          ctx.strokeStyle = borderColorPicker.value;
+          ctx.fillStyle = fillColorPicker.value;
+          ctx.fill();
+          ctx.stroke();
+      }
+      window.addEventListener("mouseup", stopRect);
     }
-  
-    let start = {};
-    function startRect(e) {
-        start = getMousePos(canvas, e);
+    catch(error) {
+      console.log(error);
     }
-    window.addEventListener("mousedown", startRect);
-  
-    let stop = {};
-    function stopRect(e) {
-        stop = getMousePos(canvas, e);
-  
-        borderColorPicker = document.getElementById("border-color-picker");
-        fillColorPicker = document.getElementById("fill-color-picker");
-  
-        ctx.beginPath();
-        ctx.rect(start.x, start.y, stop.x - start.x, stop.y - start.y);
-        ctx.strokeStyle = borderColorPicker.value;
-        ctx.fillStyle = fillColorPicker.value;
-        ctx.fill();
-        ctx.stroke();
-    }
-    window.addEventListener("mouseup", stopRect);
   }
 }
 

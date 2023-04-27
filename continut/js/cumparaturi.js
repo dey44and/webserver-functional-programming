@@ -232,7 +232,7 @@ const addToListIndexed = (nume, cantitate) => {
     });
 }
 
-const loadListLocal = () => {
+function loadListLocal() {
     if (storageAvailable("localStorage")) {
         const lista = document.getElementById("list");
 
