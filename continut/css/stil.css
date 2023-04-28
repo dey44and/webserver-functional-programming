@@ -217,8 +217,12 @@ form fieldset {
 
 .main-wrapper iframe {
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 50px;
+}
+
+.main-wrapper .iframe-par {
+    margin-top: 70px;
 }
 
 @media only screen and (max-width: 1000px) {
