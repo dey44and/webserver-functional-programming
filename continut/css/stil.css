@@ -346,6 +346,55 @@ form fieldset {
 
 /* Invat */
 
+#main-middle {
+    top: 15%;
+    right: 0;
+    position: fixed;
+    margin-right: 30px;
+    z-index: 100;
+}
+
+#main-middle h3 {
+    font-family:'GT America Extended';
+    font-size: 30px;
+    text-align: center;
+}
+
+#main-middle .toggle-class h4{
+    line-height: 2;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 0 20px;
+    font-family:'GT America Extended';
+    transition: background 0.1s;
+    padding-bottom: 0.25rem;
+    position: relative;
+}
+
+#main-middle .toggle-class h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background-color: rgb(226,26,65);
+    transition: width 0.3s ease-out;
+}
+
+#main-middle .toggle-class .toggle-class input {
+    display: none;
+}
+
+#main-middle .toggle-class h4:hover::before {
+    width: 100%;
+}
+
+#main-middle .toggle-class h4:hover {
+    cursor: pointer;
+}
+
 #sel-1, #sel-2{
     margin-left: 60px;
 }
@@ -357,6 +406,22 @@ form fieldset {
 section .form-title {
     margin-top: 50px;
 }
+
+ #main-middle input {
+    display: none;
+}
+
+/* Afisare si ascundere div */
+
+#sel-1, #sel-2, #sel-3 {
+    transition: opacity 2s;
+    opacity: 1;
+}
+
+#main-middle #toggle-menu1:checked ~ #sel-1 {
+    opacity: 0;
+}
+
 
 @media only screen and (max-width: 1000px) {
     #sel-2 #canvas {
