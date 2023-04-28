@@ -1,12 +1,12 @@
-# proiect-1-andreiiosif
-
 # Programare funcțională
 
 Site-ul reprezintă un proiect la Programare Web și folosește elementele de bază ale HTML, CSS și JavaScript.
 
+Site-ul este compus dintr-o singură pagină HTML, celelalte secțiuni fiind încărcate în site folosind AJAX.
+
 ## Server Web
 
-Implementarea s-a realizat folosind un server web în limbajul de programare **Kotlin** și suportă gestiunea mai multor clienți simultan folosind corutine.
+Implementarea s-a realizat folosind un server web în limbajul de programare **Kotlin** și gestionarul de dependințe **Maven** și suportă gestiunea mai multor clienți simultan folosind corutine.
 
 Diagrama de clase este ilustrată mai jos:
 
