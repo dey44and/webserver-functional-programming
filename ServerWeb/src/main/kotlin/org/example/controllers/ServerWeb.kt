@@ -80,6 +80,7 @@ class ServerWeb {
                         println("INFO: S-a primit de la client: $tokens")
                     }
                     // Se inchide socket-ul
+                    println("---------------------------------------")
                     clientSocket.close()
                 }
             } catch (e: Exception) {
