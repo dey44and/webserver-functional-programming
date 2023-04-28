@@ -339,7 +339,7 @@ form fieldset {
 
 #login-section #login-wrapper p {
     font-size: 25px;
-    margin-top: 70px;
+    margin-top: 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -442,6 +442,21 @@ section .form-title {
     }
 }
 
+@media only print and (max-width: 1000px) {
+    #sel-2 #canvas {
+        width: 400px;
+        height: 300px;
+    }
+
+    #sel-1, #sel-2{
+        margin-left: 30px;
+    }
+    
+    #sel-3 .sel-info {
+        margin-left: 30px;
+    }
+}
+
 /* Cumparaturi */
 
 #list-wrap #list-form {
@@ -470,6 +485,16 @@ section .form-title {
 }
 
 @media only screen and (max-width: 800px) {
+    #list-wrap #list-form {
+        margin-left: 20px;
+    }
+    
+    #list-wrap #options {
+        margin-left: 20px;
+    }
+}
+
+@media only print and (max-width: 800px) {
     #list-wrap #list-form {
         margin-left: 20px;
     }

@@ -3,7 +3,7 @@
 
 #main-image {
     width: 100%;
-    height: 500px;
+    height: 400px;
 }
 @font-face {font-family: "GT America Extended";
     src: url("http://db.onlinewebfonts.com/t/879269be836bf8d970d4ef4fb0e54f42.eot"); /* IE9*/
@@ -16,7 +16,7 @@
 #main-image-svg {
     margin: 2%;
     width: 96%;
-    height: 400px;
+    height: 300px;
     background-color: white;
 }
 
@@ -25,3 +25,33 @@
     transform-origin: center;
     transform: rotate(45deg);
 }
+
+/* Loading spinner */
+
+#loading-bar-left {
+    animation: loading-bar-morph 1s linear 0.1s infinite;
+    transform-origin: center;
+  }
+  #loading-bar-middle {
+    animation: loading-bar-morph 1s linear 0.2s infinite;
+    transform-origin: center;
+  }
+  #loading-bar-right {
+    animation: loading-bar-morph 1s linear 0.4s infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes loading-bar-morph {
+    0% {
+      transform: scaleY(1);
+    }
+    25% {
+      transform: scaleY(0.3);
+    }
+    50% {
+      transform: scaleY(0.7);
+    }
+    75% {
+      transform: scaleY(0.15);
+    }
+  }

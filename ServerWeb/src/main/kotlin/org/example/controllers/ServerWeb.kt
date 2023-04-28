@@ -40,7 +40,7 @@ class ServerWeb {
                             "GET" -> {
                                 // Read input from request
                                 //code to read and print headers
-                                var headerLine: String? = null
+                                var headerLine: String?
                                 headerLine = socketReader.readLine()
                                 while(headerLine?.isNotEmpty() == true){
                                     println(headerLine)
@@ -58,7 +58,7 @@ class ServerWeb {
                                 if(tokens[1] == tokens[1]) {
                                     // Read input from request
                                     //code to read and print headers
-                                    var headerLine: String? = null
+                                    var headerLine: String?
                                     headerLine = socketReader.readLine()
                                     while(headerLine?.isNotEmpty() == true){
                                         println(headerLine)
