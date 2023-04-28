@@ -106,8 +106,13 @@ function insertRow() {
     
     //Adăugăm celule noi în rândul nou creat
     for (var i = 0; i < table.rows[0].cells.length; i++) {
-      var newCell = newRow.insertCell(i);
-      newCell.innerHTML = "New Cell";
+      try {
+        var newCell = newRow.insertCell(i);
+        newCell.innerHTML = "New Cell";
+      }
+      catch(error) {
+        console.log("Eroare, index depasit!");
+      }
     }
     
     //Obținem valoarea color picker-ului
@@ -129,8 +134,12 @@ function insertColumn() {
     
     //Adăugăm celule noi în fiecare rând
     for (var i = 0; i < table.rows.length; i++) {
-      var newCell = table.rows[i].insertCell(pos);
-      newCell.innerHTML = "New Cell";
+      try {
+        var newCell = table.rows[i].insertCell(pos);
+        newCell.innerHTML = "New Cell";
+      } catch(error) {
+        console.log("Eroare, index depasit!");
+      }
     }
     
     //Obținem valoarea color picker-ului

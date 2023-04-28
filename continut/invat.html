@@ -53,8 +53,8 @@
     </table>
     <div class="sel-info">
         <input type="text" id="position">
-        <button onclick="insertRow()">Insereaza linie</button>
-        <button onclick="insertColumn()">Insereaza coloana</button>
+        <button onclick="try { insertRow() } catch(error) {console.log('Eroare linie, index depasit!')}">Insereaza linie</button>
+        <button onclick="try { insertColumn() } catch(error) {console.log('Eroare coloana, index depasit!')}">Insereaza coloana</button>
         <div>
             <label for="color-picker">Color:</label>
             <input type="color" id="color-picker" value="#000000">
