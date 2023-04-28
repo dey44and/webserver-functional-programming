@@ -116,6 +116,7 @@ function insertRow() {
     //Setăm culoarea de fundal a celulelor din rândul nou creat
     for (var i = 0; i < newRow.cells.length; i++) {
       newRow.cells[i].style.backgroundColor = color;
+      newRow.cells[i].style.opacity = "0.4";
     }
 }
 
@@ -138,6 +139,7 @@ function insertColumn() {
     //Setăm culoarea de fundal a celulelor din coloana nou creată
     for (var i = 0; i < table.rows.length; i++) {
       table.rows[i].cells[pos].style.backgroundColor = color;
+      table.rows[i].cells[pos].style.opacity = "0.4";
     }
 }
   
