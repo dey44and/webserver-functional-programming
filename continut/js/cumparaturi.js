@@ -187,7 +187,7 @@ const addToListLocal = (nume, cantitate) => {
     const numeCell = document.createElement("td");
     const cantitateCell = document.createElement("td");
 
-    idCell.textContent = produs.id;
+    idCell.textContent = lista.rows.length;
 
     numeCell.textContent = produs.nume;
     cantitateCell.textContent = produs.cantitate;
@@ -199,7 +199,7 @@ const addToListLocal = (nume, cantitate) => {
     lista.appendChild(row);
 
     if (storageAvailable("localStorage")) {
-        storage.save(produs)
+        storage.save(produs);
     } else {
         alert("Ai browser din Syria.");
     }
@@ -207,7 +207,6 @@ const addToListLocal = (nume, cantitate) => {
 
 const addToListIndexed = (nume, cantitate) => {
     const storage = new IndexStorage();
-    storage.setMaxIndex(0);
 
     storage.getMaxIndex().then(id => {
         let produs = new Produs(id, nume, cantitate);
@@ -218,7 +217,7 @@ const addToListIndexed = (nume, cantitate) => {
         const numeCell = document.createElement("td");
         const cantitateCell = document.createElement("td");
 
-        idCell.textContent = produs.id;
+        idCell.textContent = lista.rows.length;
 
         numeCell.textContent = produs.nume;
         cantitateCell.textContent = produs.cantitate;
@@ -270,6 +269,8 @@ const loadListIndexed = () => {
     while (lista.childNodes.length > 2)
         lista.removeChild(lista.lastChild);
 
+    let i = 0;
+
     storage.getAllItems().then(response => {
         response.forEach(data => {
             const row = document.createElement("tr");
@@ -277,7 +278,8 @@ const loadListIndexed = () => {
             const numeCell = document.createElement("td");
             const cantitateCell = document.createElement("td");
 
-            idCell.textContent = data.id;
+            i = i + 1;
+            idCell.textContent = i;
             numeCell.textContent = data.nume;
             cantitateCell.textContent = data.cantitate;
 

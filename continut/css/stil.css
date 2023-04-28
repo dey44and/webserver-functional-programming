@@ -202,19 +202,21 @@ form fieldset {
 }
 
 .main-wrapper .main-about-table {
-    margin: 0 auto;
+    margin-right: 0px;
+    margin-left: auto;
 }
 
 .main-wrapper h3 {
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 .main-wrapper ul li {
     color: #Fff;
+    margin-left: 30px;
 }
 
 .main-wrapper iframe {
-    margin-left: 20px;
+    margin-left: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -239,6 +241,15 @@ form fieldset {
     .main-wrapper iframe {
         width: 400px;
         height: 200px;
+        margin-left: 20px;
+    }
+
+    .main-wrapper h3 {
+        margin-left: 20px;
+    }
+
+    .main-wrapper ul li {
+        margin-left: 0px;
     }
 }
 
@@ -295,6 +306,10 @@ form fieldset {
     height: 50px;
 }
 
+.check-button:hover {
+    background-color:rgb(226, 82, 111);
+}
+
 #login-section #login-wrapper input {
     border-radius: 5px;
     margin: 20px 20px 10px 10px;
@@ -326,5 +341,71 @@ form fieldset {
 @media only screen and (max-width: 600px) {
     #login-section #login-wrapper {
         margin-left: 25px;
+    }
+}
+
+/* Invat */
+
+#sel-1, #sel-2{
+    margin-left: 60px;
+}
+
+#sel-3 .sel-info {
+    margin-left: 60px;
+}
+
+section .form-title {
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #sel-2 #canvas {
+        width: 400px;
+        height: 300px;
+    }
+
+    #sel-1, #sel-2{
+        margin-left: 30px;
+    }
+    
+    #sel-3 .sel-info {
+        margin-left: 30px;
+    }
+}
+
+/* Cumparaturi */
+
+#list-wrap #list-form {
+    margin-left: 50px;
+}
+
+#list-wrap #options {
+    margin-left: 50px;
+}
+
+#list-form .buy-button {
+    margin: 10px 0px 10px 0px;
+    border: none;
+    color: #fff;
+    background-color: rgb(226,26,65);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: 0.5s ease-in;
+    width: 60px;
+    height: 30px;
+}
+
+#list-form .buy-button:hover {
+    background-color:rgb(226, 82, 111);
+}
+
+@media only screen and (max-width: 800px) {
+    #list-wrap #list-form {
+        margin-left: 20px;
+    }
+    
+    #list-wrap #options {
+        margin-left: 20px;
     }
 }
