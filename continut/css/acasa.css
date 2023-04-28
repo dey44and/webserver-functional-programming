@@ -1,0 +1,40 @@
+/* Acasa */
+
+.main-section {
+    display: flex;
+    width: 100%;
+}
+
+.main-section .main-div-column {
+    width: 25%;
+}
+
+.main-section .main-div-column h2::before {
+    width: 100%;
+}
+
+.main-section .main-div-column h2 {
+    text-align: center;
+}
+
+.main-section .main-div-column p {
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 28px;
+}
+
+img {
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-section {
+        display: block;
+    }
+
+    .main-section .main-div-column {
+        padding-top: 20px;
+        width: 100%;
+    }
+}

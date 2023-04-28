@@ -8,164 +8,19 @@
 }
 
 body {
-    background-color: #121026;
+    background-color: #161618;
     min-height: 100vh;
     margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6, legend, label {
     color: #ffffff;
-    font-family:'Open Sans Bold';
+    font-family:'Open Sans';
 }
 
 header {
     display: flex;
     justify-content: space-between;
-}
-
-/* Navigation bar */
-.fsnav {
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    transform: scale(0);
-    opacity: 0;
-    transition: transform 0.2s ease-out, opacity 0.2 ease-out;
-}
-
-.fsnav--open {
-    visibility: visible;
-    transform: scale(1);
-    opacity: 1;
-}
-
-.fsnav_close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 50px;
-    font-family: sans-serif;
-    width: 1.25em;
-    height: 1.25em;
-    outline: none;
-    background: none;
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    user-select: none;
-    cursor: pointer;
-    transition: background 0.1s;
-}
-
-.fsnav_close:active,
-.fsnav_close:hover {
-    background: rgba(255, 255, 255, 0.1);
-    -webkit-tap-highlight-color: transparent;
-}
-
-.fsnav_link {
-    line-height: 2;
-    text-decoration: none;
-    color: #fff;
-    font-size: 50px;
-    padding: 0 20px;
-    font-weight: 900;
-    font-family:'GT America Extended';
-    transition: background 0.1s;
-    padding-bottom: 0.25rem;
-    position: relative;
-}
-
-.fsnav_link::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 5px;
-    background-color: rgb(226,26,65);
-    transition: width 0.5s ease-out;
-}
-
-.fsnav_link:hover::before {
-    width: 100%;
-}
-
-.fsnav_link:active, 
-.fsnav_link:hover {
-    cursor: pointer;
-}
-
-.nav-title {
-    margin-left: 25px;
-    font-family: 'GT America Extended';
-    font-weight: bolder;
-    font-size: 35px;
-    transition: background 0.1s;
-    padding-bottom: 0.25rem;
-    position: relative;
-}
-
-.nav-title::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 3px;
-    background-color: rgb(226,26,65);
-}
-
-.nav-title:hover::before {
-    width: 100%;
-}
-
-.nav-title:hover {
-    cursor: pointer;
-}
-
-.navbar-toggler {
-    display: grid !important;
-    height: min-content;
-    margin: 24px 25px 0 0;
-    cursor: pointer;
-
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-}
-
-.navbar-toggler:hover {
-    border: 1px solid rgb(226,26,65);
-    padding-left: 9px;
-    padding-right: 9px;
-    padding-top: 9px;
-}
-
-.navbar-toggler .bar {
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background: #fff;
-    border-radius: 10%;
-    transition: .4s;
-}
-
-#toggle {
-    display: none;
-}
-
-hr {
-    color:#8d8d8d;
 }
 
 /*nav a {
@@ -196,12 +51,10 @@ table, thead, tbody {
 /* Index center zone */
 .main-div-image {
     width: 60%;
-    height: 500px;
+    height: 400px;
     display: flex;
     justify-content: center;
     margin: auto;
-
-    background: radial-gradient(closest-side at 50% 50%, #ffffff, #121026);
 }
 
 .main-div-image img {
@@ -209,59 +62,20 @@ table, thead, tbody {
     display: block;
 }
 
-/* Inregistreaza */
+@media only screen and (max-width: 800px) {
+    .main-div-image {
+        width: 400px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
 
-label, input, select {
-    margin-bottom: 10px;
-}
-
-button {
-    margin: 10px 10px 10px 10px;
-    border: none;
-    color: #121026;
-    background-color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 10px;
-    transition: 1s ease-in;
-}
-
-button:hover {
-    color: white;
-    background-color: #121026;
-}
-
-img {
-    border-radius: 10%;
-}
-
-/* Desen */
-
-#main-image {
-    width: 100%;
-    height: 500px;
-}
-@font-face {font-family: "GT America Extended";
-    src: url("http://db.onlinewebfonts.com/t/879269be836bf8d970d4ef4fb0e54f42.eot"); /* IE9*/
-    src: url("http://db.onlinewebfonts.com/t/879269be836bf8d970d4ef4fb0e54f42.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("http://db.onlinewebfonts.com/t/879269be836bf8d970d4ef4fb0e54f42.woff2") format("woff2"), /* chrome firefox */
-    url("http://db.onlinewebfonts.com/t/879269be836bf8d970d4ef4fb0e54f42.woff") format("woff"), /* chrome firefox */
-    url("http://db.onlinewebfonts.com/t/879269be836bf8d970d4ef4fb0e54f42.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
-    url("http://db.onlinewebfonts.com/t/879269be836bf8d970d4ef4fb0e54f42.svg#GT America Extended") format("svg"); /* iOS 4.1- */
-}
-#main-image-svg {
-    margin: 2%;
-    width: 96%;
-    height: 400px;
-    background-color: white;
-}
-
-#main-image-svg .rotate-rect {
-    transform-box: fill-box;
-    transform-origin: center;
-    transform: rotate(45deg);
-}
+    .main-div-image img {
+        width: 400px;
+        height: 200px;
+    }
+  }
 
 /* Tabel */
 table, th, td {
@@ -273,4 +87,244 @@ table, th, td {
 td {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+/* Inregistreaza */
+
+label, input, select {
+    margin-bottom: 10px;
+}
+
+legend, label {
+    font-size: 20px;
+}
+
+form fieldset input {
+    border-radius: 5px;
+    margin: 10px 10px 10px 10px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+form fieldset label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sign-button {
+    margin: 10px 10px 10px 10px;
+    border: none;
+    color: #fff;
+    background-color: rgb(226,26,65);
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 2px;
+    transition: 0.5s ease-in;
+    width: 150px;
+    height: 50px;
+}
+
+.sign-button:hover {
+    background-color:rgb(226, 82, 111);
+}
+
+.form-title {
+    text-align: center;
+    font-family: 'GT America Extended';
+}
+
+.form-complete {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+form fieldset {
+    margin-top: 20px;
+}
+
+.button-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-div-video {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    height: 200px;
+}
+
+.main-section-video {
+    display: flex;
+    width: 100%;
+}
+
+.main-section-video .main-div-video {
+    width: 25%;
+}
+
+@media only screen and (max-width: 1600px) {
+    .main-section-video {
+        display: block;
+    }
+
+    .main-section-video .main-div-video {
+        padding-top: 20px;            
+        width: 100%;
+    };
+}
+
+/* Despre */
+.main-wrapper {
+    align-items: center;
+    justify-content: center;
+}
+
+.main-wrapper .main-paragraph {
+    margin: auto;
+    width: 600px;
+}
+
+.main-wrapper .main-par-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-wrapper p {
+    text-align: center;
+}
+
+.main-wrapper h4 {
+    text-align: center;
+}
+
+.main-wrapper .main-about-table {
+    margin: 0 auto;
+}
+
+.main-wrapper h3 {
+    margin-left: 20px;
+}
+
+.main-wrapper ul li {
+    color: #Fff;
+}
+
+.main-wrapper iframe {
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-wrapper .main-paragraph {
+        width: 400px;
+    }
+
+    .main-wrapper .main-par-image {
+        width: 300px;
+        height: 180px;
+    }
+
+    .main-wrapper iframe {
+        width: 600px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .main-wrapper iframe {
+        width: 400px;
+        height: 200px;
+    }
+}
+
+#content h2 {
+    text-align: center;
+}
+
+#content table {
+    border-collapse: collapse;
+    margin: 50px auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#content table thead tr {
+    background-color: rgb(226,26,65);
+    color: #ffffff;
+    text-align: left;
+}
+
+#content table th,
+#content table td {
+    padding: 12px 15px;
+}
+
+#content table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#content table tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(226,26,65);
+}
+
+/* Verifica */
+
+#login-section #login-wrapper {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.check-button {
+    margin: 20px 10px 0px 0px;
+    border: none;
+    color: #fff;
+    background-color: rgb(226,26,65);
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 2px;
+    transition: 0.5s ease-in;
+    width: 150px;
+    height: 50px;
+}
+
+#login-section #login-wrapper input {
+    border-radius: 5px;
+    margin: 20px 20px 10px 10px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    font-size: 25px;
+}
+
+#login-section #login-wrapper  input[type="text"]{ 
+    padding: 5px 5px; 
+    line-height: 20px; 
+}
+
+#login-section #login-wrapper  input[type="password"]{ 
+    padding: 5px 5px; 
+    line-height: 20px; 
+}
+
+#login-section #login-wrapper label {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+#login-section #login-wrapper p {
+    font-size: 25px;
+    margin-top: 70px;
+}
+
+@media only screen and (max-width: 600px) {
+    #login-section #login-wrapper {
+        margin-left: 25px;
+    }
 }

@@ -1,12 +1,14 @@
 <section id="login-section">
     <!-- Formular -->
+    <h2 class="form-title">Verificarea existenței unui utilizator în fișierul JSON</h2>
     <div id="login-wrapper">
-        <h1>Log In</h1>
         <label for="username">Nume utilizator:</label>
         <input type="text" id="username" name="username">
+        <br>
         <label for="password">Parolă:</label>
         <input type="password" id="password" name="password">
-        <button onclick="verificaJSON()">Log In</button>
-        <p id="status"></p>
+        <br>
+        <button onclick="verificaJSON()" class="check-button">Verifică</button>
+        <p id="status">Status:</p>
     </div>
 </section>

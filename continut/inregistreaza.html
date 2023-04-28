@@ -1,5 +1,6 @@
 <!-- Continutul fisierului curent -->
-<form action="/api/utilizatori" method="post">
+<h2 class="form-title">Formular de inregistrare</h2>
+<form class="form-complete" action="/api/utilizatori" method="post">
     <fieldset>
         <legend>Informații generale</legend>
         <label for="username">Nume utilizator:</label>
@@ -46,6 +47,7 @@
         <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30"/>
         <br/>
     </fieldset>
-
-    <button type="submit">Înregistrează</button>
+    <div class="button-container">
+        <button type="submit" class="sign-button">Înregistrează</button>
+    </div>
 </form>

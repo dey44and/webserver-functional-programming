@@ -116,7 +116,7 @@ function incarcaPersoane() {
           table.append(tbody);
 
           var dummy = document.querySelector("h2");
-          document.querySelector("#content").removeChild(dummy);
+          dummy.innerHTML = "Tabel incărcat cu date din fișierul XML";
           document.querySelector("#content").appendChild(table);
         }
       };
